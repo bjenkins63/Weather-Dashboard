@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jenkins Weather Dashboard</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
@@ -77,12 +77,18 @@
                     <div class="col-sm-12" class="weatherStats" id="showWeatherForecast"></div>
                 </div>
                 <br>
+                <div class="row">
+                    <div class="col-sm-3"><input id="city"></input></div>
+                    <div class="col-sm-9"><button id="getUV">Get UV Index</button></div>
+                    <div class="col-sm-12" class="weatherStats" id="showUv"></div>
+                </div>
+                <br>
 
                 <div class="row">
                     <div class="col-sm-12"><input id="city"></input>
-                        <button id="getFiveForecast">5 day</button>
+                        <button id="getWeatherForecast">5 day</button>
                     </div>
-                    <div class="col-sm-12" class="weatherStats" id="showFiveForecast"></div>
+                    <div class="col-sm-12" class="weatherStats" id="showWeatherForecast"></div>
 
 
 
