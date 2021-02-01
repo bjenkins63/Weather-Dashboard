@@ -32,7 +32,7 @@ $(document).ready(function () {
                 var wf = '';
                 const weatherIconURL = "http://openweathermap.org/img/wn/";
                 $.each(data.weather, function (index, val) {
-                    wf += '<p><b>' + data.name + "</b><img src=http://openweathermap.org/img/wn/" + val.icon[3] + ".png></p>" +
+                    wf += '<p><b>' + data.name + "</b><img src=http://openweathermap.org/img/wn/"+ val.icon +".png></p>" +
                         data.main.temp + '&deg;F ' + ' | ' + val.main + ", " + val.description + ' | ' +
                         ' Humidy: ' + data.main.humidity + '%' + ' | ' + ' Wind Speed: ' + data.wind.speed + ' mph'
                         + ' | ' + 'lon' + data.coord.lon + ' | ' + 'lat' + data.coord.lat
