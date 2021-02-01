@@ -47,9 +47,9 @@ $(document).ready(function () {
                     var latitude = data.coord.lat;
                     var key = 'ba2a06e48d754582fb2a293987aa4f29';
                     
-                    const queryURLTwo = "http://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
+                    const queryURLTwo = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
                     //     // second call
-                    var uvIndex = "http://api.openweathermap.org/data/2.5/onecall"
+                    var uvIndex = "https://api.openweathermap.org/data/2.5/onecall"
 
                     // // Data call for UV Index (OneCall) using Lat/Long from weather API URL
                     $.ajax({
