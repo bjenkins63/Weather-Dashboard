@@ -23,16 +23,16 @@ $(document).ready(function () {
 
         //get data from origin weather GET call
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather',
+            url: 'https://api.openweathermap.org/data/2.5/weather',
             dataType: 'json',
             type: 'GET',
             data: { q: city, appid: key, units: 'imperial' },
             //then checks  if went through
             success: function (data) {
                 var wf = '';
-                const weatherIconURL = "http://openweathermap.org/img/wn/";
+                const weatherIconURL = "https://openweathermap.org/img/wn/";
                 $.each(data.weather, function (index, val) {
-                    wf += '<p><b>' + data.name + "</b><img src=http://openweathermap.org/img/wn/"+ val.icon +".png></p>" +
+                    wf += '<p><b>' + data.name + "</b><img src=https://openweathermap.org/img/wn/"+ val.icon +".png></p>" +
                         data.main.temp + '&deg;F ' + ' | ' + val.main + ", " + val.description + ' | ' +
                         ' Humidy: ' + data.main.humidity + '%' + ' | ' + ' Wind Speed: ' + data.wind.speed + ' mph'
                         + ' | ' + 'lon' + data.coord.lon + ' | ' + 'lat' + data.coord.lat
@@ -76,7 +76,7 @@ $(document).ready(function () {
                         
 
 
-                    const weatherIconURL = "http://openweathermap.org/img/wn/";
+                    const weatherIconURL = "https://openweathermap.org/img/wn/";
 
                     // Five Day Forecast Data
                     // Day 1
