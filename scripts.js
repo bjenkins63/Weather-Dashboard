@@ -49,7 +49,7 @@ $(document).ready(function () {
                     
                     const queryURLTwo = "http://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
                     //     // second call
-                    var uvIndex = "https://api.openweathermap.org/data/2.5/onecall"
+                    var uvIndex = "http://api.openweathermap.org/data/2.5/onecall"
 
                     // // Data call for UV Index (OneCall) using Lat/Long from weather API URL
                     $.ajax({
