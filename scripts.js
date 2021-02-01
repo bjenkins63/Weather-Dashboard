@@ -30,10 +30,9 @@ $(document).ready(function () {
             //then checks  if went through
             success: function (data) {
                 var wf = '';
-                const weatherIconURL = "https://openweathermap.org/img/wn/";
+                // const weatherIconURL = "https://openweathermap.org/img/wn/";
                 $.each(data.weather, function (index, val) {
-                    wf += '<p><b>' + data.name + "</b><img src=https://openweathermap.org/img/wn/"+ val.icon +".png></p>" +
-                        data.main.temp + '&deg;F ' + ' | ' + val.main + ", " + val.description + ' | ' +
+                    wf += '<p><b>' + data.name + data.main.temp + '&deg;F ' + ' | ' + val.main + ", " + val.description + ' | ' +
                         ' Humidy: ' + data.main.humidity + '%' + ' | ' + ' Wind Speed: ' + data.wind.speed + ' mph'
                         + ' | ' + 'lon' + data.coord.lon + ' | ' + 'lat' + data.coord.lat
 
