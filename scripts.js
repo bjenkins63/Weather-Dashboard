@@ -1,18 +1,5 @@
 $(document).ready(function () {
 
-    //when search is clicked this is fired                / Trigger a Button Click on Enter
-    // let searchInput = document.getElementById("city");
-    // searchInput.addEventListener("keypress", function (event) {
-    //     // Number 13 is the "Enter" key on keyboard
-    //     if (event.key === "Enter") {
-    //         // Cancel the default action, if needed
-    //         event.preventDefault();
-    //         // Trigger the button element with a click
-    //         document.getElementById("button-search").click();
-    //     }
-    // console.log(event);
-    // });
-
     let now = dayjs();
     let currentDayVal = (now.format("MM/DD/YYYY"));    
 
@@ -36,12 +23,6 @@ $(document).ready(function () {
                         ' Humidy: ' + data.main.humidity + '%' + ' | ' + ' Wind Speed: ' + data.wind.speed + ' mph'
                         + ' | ' + 'lon' + data.coord.lon + ' | ' + 'lat' + data.coord.lat
 
-                    // function grabLon(data) {
-                    //     var longitude = data.coord.lon
-                    //     var latitude = data.coord.lat
-                    //     // console.log(longitude, latitude);
-                    // }
-                    // grabLon(data)
                     var longitude = data.coord.lon;
                     var latitude = data.coord.lat;
                     var key = 'ba2a06e48d754582fb2a293987aa4f29';
@@ -57,22 +38,6 @@ $(document).ready(function () {
                     }).then(function (response) {
                         $(".UvIndex").text("UV Index:");
                         $(".UvNum").text(response.current.uvi);
-
-
-                        // let uvIndex = parseFloat($(".UvNum").text());
-                        // //console.log(typeof uvIndex);
-                        //     if (UvIndex >=0 && UvIndex <= 2) {
-                        //         $(".UvNum").addClass("uv-low");
-                        //     } else if (uvIndex > 2 && uvIndex <= 5) {
-                        //         $(".UvNum").addClass("uv-moderate");
-                        //     } else if (uvIndex > 5 && uvIndex <= 7) {
-                        //         $(".UvNum").addClass("uv-high");
-                        //     } else if (uvIndex > 7 && uvIndex <= 9){
-                        //         $(".UvNum").addClass("uv-very-high");
-                        //     } else {
-                        //         $(".UvNum").addClass("uv-extreme");
-                        //     }
-                        
 
 
                     const weatherIconURL = "https://openweathermap.org/img/wn/";
@@ -123,71 +88,9 @@ $(document).ready(function () {
                     });
         
                     $("#showWeatherForecast").html(wf);
-
-
-                    
-
                 })
             }
         })
     })
             
 });
-                        // console.log(response);
-                        // $("#uvIndex").text("UV Index:");
-                        // $("#uvIndexNum").text(response.current.uvi);
-
-
-
-                    //     $.ajax({
-                    //         _url: queryURLTwo,
-                    //         method: "GET"
-                    //     }).then(function (data) {
-                    //         console.log(data);
-
-                    //     })
-                    // });
-
-
-                    // $("#showWeatherForecast").html(wf);
-                    //returning the data
-
-
-
-
-                    // console.log(data);
-
-
-                    // $("#getFiveForecast").click(function () {
-                    //     var longitude = data.coord.lon;
-                    //     var latitude = data.coord.lat;
-                    //     var key = 'ba2a06e48d754582fb2a293987aa4f29';
-                    //     const queryURLTwo = "http://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
-                    // // second call
-                    //     $.ajax({
-                    //         _url: queryURLTwo,
-                    //         method: "GET"
-                    //     }).then(function (data){
-                    //         console.log(data);
-
-                    //     })
-                // })
-
-                        // get url() {
-                        //     return this._url;
-                        // },
-                        // set url(value) {
-                        //     this._url = value;
-                        // },
-                        // dataType: 'json',
-                        // method: 'GET',
-
-                        // _success: function (data) {
-                        //     console.log(data);
-                        //     // $.each(data.daily, function (_index, val) {
-                        //     //     wf5 += data.daily.weather + data.daily.uvi
-                        //     // });
-
-
-                        //     // $("#showFiveForecast").html(wf5);
-                        // }
